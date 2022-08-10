@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main()
+{
+    int perv=0,cur=1,next=0,i,n;
+    printf("Enter a number:");
+    scanf("%d",&n);
+    printf("1 ");
+    for(i=0;i<n-1;i++)
+    {
+        next=perv+cur;
+        printf("%d ",next);
+        perv=cur;
+        cur=next;
+    }
+    return 0;
+}
