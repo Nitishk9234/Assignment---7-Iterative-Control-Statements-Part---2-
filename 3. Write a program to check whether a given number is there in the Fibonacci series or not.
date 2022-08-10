@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+int main()
+{
+    int perv=0,cur=1,next=0,i,n;
+    printf("Enter a number:");
+    scanf("%d",&n);
+    if(n==1)
+        printf("found");
+    if(n<1)
+        printf("wrong value");
+
+    for(i=0;i<n-1;i++)
+    {
+        next=perv+cur;
+        perv=cur;
+        cur=next;
+        if(next==n)
+        {
+            printf("number found");
+            break;
+        }
+        if(next>n)
+        {
+           printf("not found");
+            break;
+        }
+
+    }
+
+
+    return 0;
+}
